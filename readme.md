@@ -1,44 +1,35 @@
-# README
+# Golang Exercise
 
-## Prerequisites
-- connect to mysql and import albums.sql
-```sh
-docker cp albums.sql mysql:/root/albums.sql
-docker exec -it mysql mysql -u root -p
-create database recordings;
-use recordings;
-source /root/albums.sql
-```
+## Learning Docs for Review
+- cheatsheet.md
+- learning.md
+- readme.md
 
-- export ENV variable
-```sh
-export DB_USERNAME=root
-export DB_PASSWORD=root
-```
+## Golang Tutorial
+ref: [https://go.dev/doc/tutorial/](https://go.dev/doc/tutorial/)
 
-## Run
-`cd data_access`
-`go run .`
+- [x] 01-getting-started          
+- [x] 02-greetings-create-module  
+- [x] 03-hello-use-module         
+- [x] 04-hello-add-error          
+- [x] 05-add-random               
+- [x] 06-add-range                
+- [x] 07-testing                  
+- [x] 08-accessing-low-level-sql  
+- [x] 09-api-webservice-via-gin   
 
+## Golang Tour
+ref: [https://go.dev/tour/welcome/1](https://go.dev/tour/welcome/1)
 
-ref: 
-(https://go.dev/doc/tutorial/web-service-gin)[https://go.dev/doc/tutorial/web-service-gin]
+- [x] 10-go-tour-training-sqrt    
+- [x] 11-go-tour-training-slice   
+- [x] 12-go-tour-training-map
+- [x] 13-go-tour-trainig-function-fibonacci
+- [x] 14-go-tour-stringer
+- [x] 15-go-tour-sqrt-error
+- [ ] 16-go-tour-ascii
+- [ ] 17-go-tour-rot13-reader
+- [ ] 18-go-tour-images
+- [ ] 19-go-tour-binary-tree
+- [ ] 20-go-tour-web-crawler
 
-## How To Run
-- `go run .`
-- dan di another terminal
-```sh
-# get all album
-curl http://localhost:8000/albums
-
-# get album by id
-curl http://localhost:8000/albumbs/1
-
-# post new album
-curl http://localhost:8000/albums \
---include \
---request "POST" \
---header "Content-Type: application/json" \
---data '{"id": "5", "artist": "John Doe", "title": "Everybody loves", "price": 9.67}'
-```
-- 
